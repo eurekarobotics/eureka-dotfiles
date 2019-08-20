@@ -25,12 +25,22 @@
   (require 'use-package))
 (require 'diminish)
 (require 'bind-key)
+
+
 ;; directory containing my personal elisp scripts
 (add-to-list 'load-path "~/.emacs.d/elisp/")
 
+
 ;; Configure core configurations: evil, magit, etc
 (use-package overall-configs
-:load-path "~/.emacs.d/elisp" :demand)
+  :load-path "~/.emacs.d/elisp"
+  :demand)
+
+;; Configure appearances
+(use-package theme
+  :load-path "~/.emacs.d/elisp"
+  :init (message "Configure appearances"))
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
