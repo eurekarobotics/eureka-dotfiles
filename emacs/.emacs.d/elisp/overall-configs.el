@@ -12,6 +12,16 @@
   :bind ("M-s 0" . ag)
   )
 
+(use-package projectile
+  :ensure t
+  :config
+  (define-key projectile-mode-map (kbd "s-,") 'projectile-command-map)
+  (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+  (setq projectile-indexing-method 'hybrid)
+  (setq projectile-completion-system 'ivy)
+  (projectile-mode +1)
+  )
+
 ;; magit: the git porcelain
 (use-package magit
   :ensure t

@@ -7,9 +7,14 @@
 
 (use-package zenburn-theme
   :ensure t
-  :demand
+  :defer
   :config
   (message "Configure zenburn")
+  )
+
+(use-package dracula-theme
+  :ensure t
+  :demand
   )
 
 (provide 'theme)
