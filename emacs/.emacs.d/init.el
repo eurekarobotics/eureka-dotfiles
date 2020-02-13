@@ -36,6 +36,16 @@
   :load-path "~/.emacs.d/elisp"
   :demand)
 
+;; Configure core configurations: evil, magit, etc
+(use-package python-configs
+  :load-path "~/.emacs.d/elisp"
+  :demand
+  :bind (
+	 ("C-c C-o" . python-occur-definitions)
+	 )
+  )
+
+
 ;; Configure appearances
 (use-package theme
   :load-path "~/.emacs.d/elisp"

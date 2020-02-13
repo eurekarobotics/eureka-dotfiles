@@ -147,31 +147,5 @@
 	;; allow input not in order
         '((t   . ivy--regex-plus))))
 
-;; very useful function.
-(defun python-occur-definitions ()
-  "Display an occur buffer of all definitions in the current buffer.
-Also, switch to that buffer."
-  (interactive)
-  (let ((list-matching-lines-face nil))
-    (occur "^ *\\(def\\|class\\|cdef\\|cpdef\\) "))
-  (let ((window (get-buffer-window "*Occur*")))
-    (if window
-        (select-window window)
-      (switch-to-buffer "*Occur*"))))
-
-(defun python--list-defs-in-buffer ()
-  "List definitions found in current buffer."
-  (interactive)
-  (goto-char (point-min))
-  (if (re-search-forward "def" nil t)  ;; Search forward for some regular expression
-      (message (thing-at-point 'line))
-    (message "do not found any def")
-      )
-
-)
-
-
-(define-key python-mode-map (kbd "C-c C-o") 'python-occur-definitions)
-
 (provide 'overall-configs)
 ;;; overall_configurations ends here
