@@ -1,3 +1,7 @@
+# TOC
+1. [Overview](#overview)
+2. [Installation](#installation)
+
 # Overview
 
 This repo contains some common configs on Eureka machines.
