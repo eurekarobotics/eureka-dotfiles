@@ -1,6 +1,8 @@
 # TOC
 1. [Overview](#overview)
 2. [Installation](#installation)
+3. [Usage](#usage)
+4. [Contribute](#contribute)
 
 # Overview
 
@@ -38,6 +40,9 @@ this buffer to see the different subcommands. Have fun exploring.
 ## Projectile
 
 Very powerful file navigation system in a git repo. Try pressing (s-, f f). Note that s is the Windows key.
+
+# Contribute
+Feel free to open a PR to this repo.
 
 
 
