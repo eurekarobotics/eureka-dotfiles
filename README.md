@@ -17,13 +17,25 @@ sudo apt install stow
 ```
 
 Here I assume you have already had a recent version of Emacs. 26.x
-should do. Install the config file by doing:
+should do, but emacs 27 is preferred. To install the lastest version
+of emacs on Ubuntu, 
+
+```shell
+sudo add-apt-repository ppa:ubuntu-elisp/ppa 
+sudo apt-get update 
+sudo apt install emacs-snapshot
+```
+
+Now you can run emacs with `emacs-snapshot`.
+
+
+Install the config file by doing:
 ``` shell
 cd eureka-dotfiles && stow emacs
 ```
 
 Start emacs and wait for the packages to complete downloading and
-installation.
+installation. You are now good to go.
 
 # Usage
 
@@ -40,6 +52,13 @@ this buffer to see the different subcommands. Have fun exploring.
 ## Projectile
 
 Very powerful file navigation system in a git repo. Try pressing (s-, f f). Note that s is the Windows key.
+
+## lsp-mode
+
+Provides IDE-like experience on Emacs. Need some configuration but
+work wonderfully when it does.
+
+Hint: Try using Emacs in the docker container. Work quite well in fact.
 
 # Contribute
 Feel free to open a PR to this repo.
