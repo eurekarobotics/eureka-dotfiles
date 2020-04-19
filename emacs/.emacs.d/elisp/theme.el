@@ -4,7 +4,7 @@
 (menu-bar-mode -1)
 (global-hl-line-mode)			; highlight current line
 (global-set-key (kbd "C-c e") 'eval-region)
-(set-face-font 'default "Monospace-9") ; default font
+(set-face-font 'default "Monospace-10") ; default font
 
 (use-package zenburn-theme
   :ensure t
@@ -16,6 +16,8 @@
 (use-package dracula-theme
   :ensure t
   :demand
+  :config
+  (load-theme `dracula)
   )
 
 (provide 'theme)
