@@ -5,19 +5,20 @@
 (global-hl-line-mode)			; highlight current line
 (global-set-key (kbd "C-c e") 'eval-region)
 (set-face-font 'default "Monospace-10") ; default font
+(fringe-mode '(4 . 0))                  ; left fringe only, and a very small one
 
 (use-package zenburn-theme
   :ensure t
-  :defer
+  :demand
   :config
   (message "Configure zenburn")
+  (load-theme 'zenburn)
   )
 
 (use-package dracula-theme
   :ensure t
-  :demand
-  :config
-  (load-theme `dracula)
-  )
+  :defer
+  ;; :config
+  ;; (load-theme `dracula))
 
 (provide 'theme)
