@@ -30,7 +30,6 @@
 ;; directory containing my personal elisp scripts
 (add-to-list 'load-path "~/.emacs.d/elisp/")
 
-
 ;; Configure core configurations: evil, magit, etc
 (use-package overall-configs
   :load-path "~/.emacs.d/elisp"
@@ -50,8 +49,13 @@
   :config
   (setq gc-cons-threshold 100000000)
   (setq read-process-output-max (* 1024 1024)) ;; 1mb
-  )
+  (setq lsp-enable-on-type-formatting nil))
 
+(use-package yaml-mode
+  :demand)
+
+(require 'google-c-style)
+(add-hook 'c-mode-common-hook 'google-set-c-style)
 
 ;; Configure appearances
 (use-package theme
