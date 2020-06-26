@@ -70,7 +70,7 @@
  '(custom-safe-themes
    '("76c5b2592c62f6b48923c00f97f74bcb7ddb741618283bdb2be35f3c0e1030e3" "63df625509cec7b2b7deba1d48ef07ffbee99c735a95d130ad9d1fc3df8b9a34" default))
  '(package-selected-packages
-   '(cmake-mode lsp-python-ms lsp-ui lsp-mode yaml-mode dockerfile-mode ag diminish use-package)))
+   '(rg cmake-mode lsp-python-ms lsp-ui lsp-mode yaml-mode dockerfile-mode ag diminish use-package)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

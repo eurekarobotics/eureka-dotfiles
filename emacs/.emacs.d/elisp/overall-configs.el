@@ -5,6 +5,15 @@
 ;;; Code:
 ;; System configuraitons
 
+;; A very nice package for searching. I think this one beat everything
+;; else.
+(use-package rg
+  :demand
+  :after wgrep
+  :config
+  (rg-enable-default-bindings))
+
+
 (use-package ag
   :ensure t
   :defer t
