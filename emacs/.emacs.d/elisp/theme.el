@@ -20,6 +20,7 @@
   :ensure t
   :defer
   ;; :config
-  ;; (load-theme `dracula))
+  ;; (load-theme `dracula)
+  )
 
 (provide 'theme)

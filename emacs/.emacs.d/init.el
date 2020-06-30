@@ -10,7 +10,6 @@
 (add-to-list 'package-archives '("elpy" . "https://jorgenschaefer.github.io/packages/"))
 (package-initialize)
 
-
 (unless (package-installed-p 'diminish)
   (package-refresh-contents)
   (package-install 'diminish))
@@ -68,7 +67,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
-   '("76c5b2592c62f6b48923c00f97f74bcb7ddb741618283bdb2be35f3c0e1030e3" "63df625509cec7b2b7deba1d48ef07ffbee99c735a95d130ad9d1fc3df8b9a34" default))
+   '("816bacf37139d6204b761fea0d25f7f2f43b94affa14aa4598bce46157c160c2" "76c5b2592c62f6b48923c00f97f74bcb7ddb741618283bdb2be35f3c0e1030e3" "63df625509cec7b2b7deba1d48ef07ffbee99c735a95d130ad9d1fc3df8b9a34" default))
  '(package-selected-packages
    '(rg cmake-mode lsp-python-ms lsp-ui lsp-mode yaml-mode dockerfile-mode ag diminish use-package)))
 (custom-set-faces
