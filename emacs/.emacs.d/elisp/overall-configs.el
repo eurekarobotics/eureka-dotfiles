@@ -13,7 +13,6 @@
   :config
   (rg-enable-default-bindings))
 
-
 (use-package ag
   :ensure t
   :defer t
@@ -42,6 +41,8 @@
   :bind (:map evil-normal-state-map
 	      ("C-f" . evil-avy-goto-char))
   :demand
+  :init
+  (setq evil-want-keybinding nil)
   :config
   (evil-mode t)
 
@@ -115,9 +116,11 @@
   (setq key-chord-two-keys-delay 0.1)
   (key-chord-define evil-insert-state-map "jk" 'evil-force-normal-state))
 
-(use-package evil-magit
+(use-package evil-collection
+  :after evil
   :ensure t
-  :after magit evil)
+  :config
+  (evil-collection-init))
 
 (setq dired-listing-switches "-lah")
 
