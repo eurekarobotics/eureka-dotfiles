@@ -1,22 +1,6 @@
 ;; Completion package
-(use-package company
-  :ensure t
-  :demand
-  :bind (
-	 ("C-M-i" . company-complete)
-	 :map python-mode-map
-	 ("C-M-i" . company-complete)
-	 :map emacs-lisp-mode-map
-	 ("C-M-i" . company-complete)
-	 )
-  :config
-  (add-hook 'after-init-hook 'global-company-mode)
-  (setq company-idle-delay 0)
-  (setq company-minimum-prefix-length 1))
-
 (use-package py-autopep8
   :ensure t)
-
 
 (use-package smartparens
   :ensure t

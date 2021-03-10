@@ -5,7 +5,6 @@
 (global-hl-line-mode)			; highlight current line
 (global-set-key (kbd "C-c e") 'eval-region)
 (set-face-font 'default "Monospace-11") ; default font
-
 (fringe-mode '(4 . 0))                  ; left fringe only, and a very small one
 
 (use-package zenburn-theme

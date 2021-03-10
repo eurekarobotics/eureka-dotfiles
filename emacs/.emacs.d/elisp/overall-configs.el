@@ -3,12 +3,13 @@
 ; This file contains some overall configurations of my Emacs
 
 ;;; Code:
-;; System configuraitons
+;; System configurations
 
 ;; A very nice package for searching. I think this one beat everything
 ;; else.
 (use-package rg
   :demand
+  :ensure t
   :after wgrep
   :config
   (rg-enable-default-bindings))
@@ -27,8 +28,7 @@
   (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
   (setq projectile-indexing-method 'hybrid)
   (setq projectile-completion-system 'ivy)
-  (projectile-mode +1)
-  )
+  (projectile-mode +1))
 
 ;; magit: the git porcelain
 (use-package magit
@@ -88,9 +88,7 @@
     (kbd "n")       'evil-search-next
     (kbd "N")       'evil-search-previous
     (kbd "C-d")     'evil-scroll-down
-    (kbd "C-i")     'evil-scroll-up)
-
-  )
+    (kbd "C-i")     'evil-scroll-up))
 
 (use-package evil-nerd-commenter
   :after evil
@@ -120,7 +118,8 @@
   :after evil
   :ensure t
   :config
-  (evil-collection-init))
+  (evil-collection-init '(magit dired))
+  )
 
 (setq dired-listing-switches "-lah")
 
@@ -158,6 +157,9 @@
   (setq ivy-re-builders-alist
 	;; allow input not in order
         '((t   . ivy--regex-plus))))
+
+;; Cmake
+(add-hook 'cmake-mode-hook (lambda () (setq-local company-backends '(company-cmake company-ispell))))
 
 (provide 'overall-configs)
 ;;; overall_configurations ends here
