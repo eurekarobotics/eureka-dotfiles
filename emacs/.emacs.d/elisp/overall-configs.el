@@ -118,8 +118,7 @@
   :after evil
   :ensure t
   :config
-  (evil-collection-init '(magit dired))
-  )
+  (evil-collection-init '(magit dired)))
 
 (setq dired-listing-switches "-lah")
 

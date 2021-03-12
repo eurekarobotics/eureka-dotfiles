@@ -56,6 +56,11 @@
   (setq read-process-output-max (* 1024 1024)) ;; 1mb
   (setq lsp-enable-on-type-formatting nil))
 
+;; Package for showing documentation
+(use-package lsp-ui
+  :ensure t
+  :config)
+
 (add-to-list 'load-path "~/.emacs.d/elisp/")
 
 (use-package overall-configs
