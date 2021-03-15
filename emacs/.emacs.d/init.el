@@ -28,6 +28,14 @@
 (require 'diminish)
 (require 'bind-key)
 
+
+;; When we use emacs to open a symlink, the symlink is open rather
+;; than the actual file that the symlink points to.
+(setq find-file-existing-other-name nil)
+(setq find-file-visit-truename nil)
+(setq vc-follow-symlinks nil)
+(setq vc-handled-backends nil)
+
 (use-package general
   :ensure t
   :config
